@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Dapper;
+using Dapper; //узнал что такое Даппер, спасибо!
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -14,7 +14,7 @@ namespace Core
         private static string connect = ConfigurationManager.ConnectionStrings["Psihi"].ConnectionString;
         private static IDbConnection connection = new SqlConnection(connect);
 
-        public static List<Problems> GetProblems()
+        public static List<Problems> GetProblems() //Желательно отделять части кода пробелами, это повысит читаемость кода
         {
             return connection.Query<Problems>("select id_problems, name from Problems").AsList();
         }
@@ -36,7 +36,7 @@ namespace Core
         }
         public static List<Problems> GetEmployeesWithProblems(int id_employee)
         {
-            return connection.Query<Problems>("select e.id_employee, p.name from [dbo].[Employee] e" + 
+            return connection.Query<Problems>("select e.id_employee, p.name from [dbo].[Employee] e" + //интересная реализация метода с Linq запросом
                 " join [dbo].[Empl_Prob] epp on epp.id_employee = e.id_employee join [dbo].[Problems] p" +
                 $" on epp.id_problems = p.id_problems where epp.id_employee = {id_employee}").AsList();
         }
@@ -74,7 +74,7 @@ namespace Core
                 return connection.Query<Client>($"select * from [dbo].[Client]" +
                     $"where [id_client] = {id}").AsList()[0];
             }
-            catch
+            catch //блок catch не обрабатывает исключение
             {
                 { return null; }
             }

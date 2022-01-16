@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Text;  
 
 namespace Core
 {
@@ -8,6 +8,6 @@ namespace Core
     {
         public int id_type { get; set; }
         public string name { get; set; }
-        public int price { get; set; }
+        public int price { get; set; }  //для денег лучше подходит тип данных decimal 
     }
 }

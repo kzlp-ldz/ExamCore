@@ -6,7 +6,7 @@ namespace Core
     {
         static void Main(string[] args)
         {
-            var b = DataManag.GetEmployees();
+            var b = DataManag.GetEmployees(); // Переменные должны иметь более осмысленные названия
             
             foreach (var d in b)
             {
