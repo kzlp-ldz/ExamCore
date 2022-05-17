@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "..\API\API.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "..\Web\Web.csproj", "{08F7F77E-FF5F-4658-8766-4FD16D03D001}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "..\Console\Console.csproj", "{618A252B-35D8-45EB-9513-613F43C6EF39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console", "..\Console\Console.csproj", "{618A252B-35D8-45EB-9513-613F43C6EF39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsihiWpf", "..\PsihiWpf\PsihiWpf.csproj", "{1D8B267B-FD87-43AA-92F4-D4E3E98F58EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{618A252B-35D8-45EB-9513-613F43C6EF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{618A252B-35D8-45EB-9513-613F43C6EF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{618A252B-35D8-45EB-9513-613F43C6EF39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8B267B-FD87-43AA-92F4-D4E3E98F58EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8B267B-FD87-43AA-92F4-D4E3E98F58EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8B267B-FD87-43AA-92F4-D4E3E98F58EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8B267B-FD87-43AA-92F4-D4E3E98F58EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
