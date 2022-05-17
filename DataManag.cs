@@ -18,6 +18,30 @@ namespace Core
         {
             return connection.Query<Problems>("select id_problems, name from Problems").AsList();
         }
+        public static Problems GetProblem(int id)
+        {
+            try
+            {
+                return connection.Query<Problems>($"select * from [dbo].[Problems]" +
+                    $"where [id_problems] = {id}").AsList()[0];
+            }
+            catch
+            {
+                { return null; }
+            }
+        }
+        public static void AddProblem(Problems problems)
+        {
+            connection.Query($"insert into [dbo].[Problems] ([name]) values ('{problems.name}')");
+        }
+        public static void RemoveProblem(int id)
+        {
+            connection.Query($"delete [dbo].[Problems] where [id_problems] = {id}");
+        }
+        public static void UpdateProblems(int id, Problems problems)
+        {
+            connection.Query($"update [dbo].[Problems] set [name] = '{problems.name}' where [id_problems] = {id}");
+        }
         public static List<TypeTerapy> GetTypes()
         {
             return connection.Query<TypeTerapy>("select * from TypeTerapy").AsList();
